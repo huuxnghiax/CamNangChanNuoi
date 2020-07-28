@@ -111,3 +111,7 @@ Route::get('dangbaiviet','PageController@getDangbaiviet');
 Route::post('dangbaiviet','PageController@postDangbaiviet');
 
 Route::any('timkiem','PageController@TimKiem');
+
+Route::get('thongke','PageController@thongke');
+
+Route::get('lienhe','PageController@lienhe');

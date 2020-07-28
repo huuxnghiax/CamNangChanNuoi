@@ -25,6 +25,8 @@
 
 @include('layout.welcome')
 
+@include('layout.slide')
+
 @yield('content')
 
 <script src="js/lightbox-plus-jquery.min.js"></script>

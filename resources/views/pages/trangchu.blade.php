@@ -123,7 +123,7 @@
 								</div>
 								<div class="col-md-9 tab-post-info">
 								<h4><a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html">{{$tt->TieuDe}}</a></h4>
-								<p>Posted By <a href="">{{$tt->NguoiDang}}</a> &nbsp;&nbsp; {{$tt->created_at}} &nbsp;&nbsp; <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html">Comments ({{$demComment}})</a></p>
+								<p>Posted By <a href="">{{$tt->NguoiDang}}</a> &nbsp;&nbsp; {{$tt->created_at->format("H:i:s d-m-Y")}} &nbsp;&nbsp; <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html">Comments ({{$demComment}})</a></p>
 								</div>
 								<div class="clearfix"></div>
 							</div>

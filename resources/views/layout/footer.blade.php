@@ -5,10 +5,13 @@
 			<div class="col-md-6 news-ltr">
 				<h4>Giới thiệu</h4>
 				<p>Chúng tôi luôn luôn cập nhật thông tin chinh xác nhanh chóng những dịch bệnh trên động vật hiện nay</p>
+
+				<br><br>
+				<h4><a href="thongke" style="text-decoration: none;">Thống kê</a></h4>
 			</div>
 
 			<div class="col-md-6 news-ltr">
-				<h4>Liên hệ</h4>
+				<h4><a href="lienhe" style="text-decoration: none;">Liên hệ</a></h4>
 				<p>Mail: <a href="mailto:camnangchannuoi@gmail.com" style="text-decoration: none;">camnangchannuoi@gmail.com</a></p>
 				<p>Số điện thoại: (+84)123456789</p>
 				<p>Địa chỉ: Học viện Nông nghiệp Việt Nam, Trâu Quỳ, Gia Lâm, Hà Nội</p>

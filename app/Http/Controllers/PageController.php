@@ -18,18 +18,21 @@ class PageController extends Controller
     {
         $theloai = TheLoai::all();
         $loaitin = LoaiTin::all();
+        $slide = Slide::all();
+        $tintuc = TinTuc::all();
+        $user = User::all();
+
         view()->share('theloai',$theloai);
         view()->share('loaitin',$loaitin);
+        view()->share('slide',$slide);
+        view()->share('tintuc',$tintuc);
+        view()->share('user',$user);
 
         
     }
 
     function trangchu(){
         return view('pages.trangchu');
-    }
-
-    function lienhe(){
-        return view('pages.lienhe');
     }
 
     function loaitin($id){
@@ -221,8 +224,22 @@ class PageController extends Controller
 
     function Timkiem(Request $request){
         $tukhoa=$request->get('tukhoa');
-        $tintuc = TinTuc::where('TieuDe','like','%'.$tukhoa.'%')->orWhere('TomTat','like','%'.$tukhoa.'%')->orWhere('NoiDung','like','%'.$tukhoa.'%')->orWhere('NguoiDang','like','%'.$tukhoa.'%')->orWhere('created_at','like','%'.$tukhoa.'%')->paginate(5);
-        return view('pages.timkiem',['tukhoa'=>$tukhoa,'tintuc'=>$tintuc]);
+        
+        //Nếu truyền từ khóa là d-m-Y
+        $ngayDang1 = date("Y-m-d", strtotime($tukhoa));
+        //Nếu truyền từ khóa là d/m/Y
+        $time = str_replace('/','-',$tukhoa);
+        $ngayDang2 = date("Y-m-d",strtotime($time));
 
+        $tintuc = TinTuc::where('TieuDe','like','%'.$tukhoa.'%')->orWhere('TomTat','like','%'.$tukhoa.'%')->orWhere('NoiDung','like','%'.$tukhoa.'%')->orWhere('NguoiDang','like','%'.$tukhoa.'%')->orWhere('created_at','like','%'.$ngayDang1.'%')->orWhere('created_at','like','%'.$ngayDang1.'%')->orWhere('created_at','like','%'.$ngayDang2.'%')->paginate(5);
+        return view('pages.timkiem',['tukhoa'=>$tukhoa,'tintuc'=>$tintuc]);
+    }
+
+    function thongke(){
+        return view('pages.thongke');
+    }
+    
+    function lienhe(){
+        return view('pages.lienhe');
     }
 }

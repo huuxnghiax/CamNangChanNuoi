@@ -9,12 +9,12 @@
 						<img class="img-responsive sin-on" src="Upload/tintuc/{{$tintuc->Hinh}}" alt="" />
 							<div class="blog-top">
 							<div class="blog-left">
-								<span>{{$tintuc->created_at}}</span>
+								<span>{{$tintuc->created_at->format("H:i:s d-m-Y")}}</span>
 								<span>&nbsp; Đăng bởi {{$tintuc->NguoiDang}}</span>
 							</div>
 							<div class="top-blog">
 
-								<b><a class="fast" href="#">{{$tintuc->TieuDe}}</a></b>
+								<b><a class="fast" href="">{{$tintuc->TieuDe}}</a></b>
 								<p class="sed">{!! $tintuc->TomTat !!}</p>
 								<br>
 									 <p>{!! $tintuc->NoiDung !!}</p>
@@ -41,7 +41,7 @@
 					</a>
 				  </div>
 				  <div class="media-body">
-					<h4 class="media-heading"><a href="#">{{$cm->user->name}}</a>&nbsp;<small>{{$cm->created_at}}</small></h4>
+					<h4 class="media-heading"><a href="#">{{$cm->user->name}}</a>&nbsp;<small>{{$cm->created_at->format("H:i:s d-m-Y")}}</small></h4>
 						<p>{{$cm->NoiDung}}</p>
 				  </div>
 				</div>
